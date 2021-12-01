@@ -1,0 +1,86 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  padding: 2rem;
+
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+
+  font-family: "Consolas";
+  font-weight: 300;
+
+  /*background: #0f0f0d;*/
+  color: white;
+}
+.right-column{
+  display: flex;
+  flex-direction: column;
+}
+.game-board{
+  margin-right: 1rem;
+}
+canvas{
+  background: white;
+  border: #e0bb76 2px solid;
+}
+.next{
+  width: 100px;
+  height: 100px;
+  margin-bottom: 2rem;
+}
+.play-button{
+  font-family: "Consolas";
+  font-weight: 800;
+  font-size: 20px;
+
+  transition: all 200ms ease-in-out;
+
+  padding: 1rem 2rem;
+
+  border-radius: .5rem;
+
+  border: 1px transparent solid;
+  background-color: #6e896a;
+}
+.play-button:hover{
+  color: white;
+  background-color: #325434;
+  border: white 1px solid;
+  border-radius: 1rem;
+}
+.pause-button{
+  font-family: "Consolas";
+  font-weight: 800;
+  font-size: 20px;
+
+  margin: 1rem 0;
+
+  transition: all 200ms ease-in-out;
+
+  padding: 1rem 2rem;
+
+  border-radius: .5rem;
+
+  border: 1px transparent solid;
+  background-color: #ee892f;
+}
+.pause-button:hover{
+  color: white;
+  background-color: #e76020;
+  border: white 1px solid;
+  border-radius: 1rem;
+}
+.game-over{
+  background: rgba(51, 51, 51, 0.6);
+
+}
+.game-over::after{
+  content: 'Game over';
+
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 50px;
+  font-family: Consolas;
+
+}
