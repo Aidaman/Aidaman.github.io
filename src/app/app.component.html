@@ -2,48 +2,57 @@
   <div class="top-left min-padding">
     <h1 class="site-name"><span class="gold-text">B&V</span> - Angular Puzzles</h1>
     <div #playground class="playground grid-2x2" [ngClass]="{'grid-2x2': (appService.DisplayGrid | async) == true}">
-      <img src="assets/bigImageFifteen.png" alt="Fifteen" (click)="DirectTo('Fifteen')" [ngClass]="{'display-none':(appService.DisplayGrid | async) == false}" class="game1 game">
-      <img src="assets/BigImage2048.png" alt="2048" (click)="DirectTo('2048')" [ngClass]="{'display-none':(appService.DisplayGrid | async) == false}" class="game2 game">
-      <img src="assets/BigImageTetris2.png" alt="Tetris" (click)="DirectTo('Tetris')" [ngClass]="{'display-none':(appService.DisplayGrid | async) == false}" class="game3 game">
-      <img src="assets/BigImageTicTac.png" alt="TicTacToe" (click)="DirectTo('TicTacToe')" [ngClass]="{'display-none':(appService.DisplayGrid | async) == false}" class="game4 game">
+      <img src="assets/bigImageFifteen.png" alt="Fifteen" (click)="DirectTo('Fifteen')"
+           [ngClass]="{'display-none':(appService.DisplayGrid | async) == false}" class="game1 game">
+      <img src="assets/BigImage2048.png" alt="2048" (click)="DirectTo('2048')"
+           [ngClass]="{'display-none':(appService.DisplayGrid | async) == false}" class="game2 game">
+      <img src="assets/BigImageTetris2.png" alt="Tetris" (click)="DirectTo('Tetris')"
+           [ngClass]="{'display-none':(appService.DisplayGrid | async) == false}" class="game3 game">
+      <img src="assets/BigImageTicTac.png" alt="TicTacToe" (click)="DirectTo('TicTacToe')"
+           [ngClass]="{'display-none':(appService.DisplayGrid | async) == false}" class="game4 game">
       <router-outlet></router-outlet>
     </div>
   </div>
   <div class="top-right min-padding z-depth-2">
     <!-- <img class="logo" src="../../../assets/logo.png" alt="LoGo"> -->
     <img class="logo" src="assets/blackLogo.png" alt="LoGo">
-    <img (click)="DirectToMain()" (mouseenter)="mainHover()" (mouseleave)="mainUnhover()" class="switch-to-main" alt="Main" [src]="mainButtonSrc">
+    <img (click)="DirectToMain()" (mouseenter)="mainHover()" (mouseleave)="mainUnhover()" class="switch-to-main"
+         alt="Main" [src]="mainButtonSrc">
     <p class="game-rules">Правила игр</p>
-    <img [src]="fifteenImg" (click)="DirectTo('Fifteen/Rules')" class="game-switch" (mouseenter)="FifteenHover()" (mouseleave)="FifteenUnhover()">
-    <img [src]="tetrisImg" (click)="DirectTo('Tetris/Rules')" class="game-switch" (mouseenter)="TetrisHover()" (mouseleave)="TetrisUnhover()" alt="Tetris-Rules">
-    <img [src]="twentyFourtyEightImg" (click)="DirectTo('2048/Rules')" class="game-switch" (mouseenter)="TFEHover()" (mouseleave)="TFEUnhover()" alt="2048-Rules">
-    <img [src]="ticTacToeImg" (click)="DirectTo('Tic-Tac-Toe/Rules')" class="game-switch" (mouseenter)="TicTacToeHover()" (mouseleave)="TicTacToeUnhover()" alt="TicTacToe-rules">
+    <img [src]="fifteenImg" (click)="DirectTo('Fifteen/Rules')" class="game-switch" (mouseenter)="FifteenHover()"
+         (mouseleave)="FifteenUnhover()">
+    <img [src]="tetrisImg" (click)="DirectTo('Tetris/Rules')" class="game-switch" (mouseenter)="TetrisHover()"
+         (mouseleave)="TetrisUnhover()" alt="Tetris-Rules">
+    <img [src]="twentyFourtyEightImg" (click)="DirectTo('2048/Rules')" class="game-switch" (mouseenter)="TFEHover()"
+         (mouseleave)="TFEUnhover()" alt="2048-Rules">
+    <img [src]="ticTacToeImg" (click)="DirectTo('Tic-Tac-Toe/Rules')" class="game-switch"
+         (mouseenter)="TicTacToeHover()" (mouseleave)="TicTacToeUnhover()" alt="TicTacToe-rules">
   </div>
-<!--  <div class="bottom-left min-padding z-depth-2">-->
-<!--    <img class="avatar" src="assets/avatar.gif" alt="Avatar">-->
+  <!--  <div class="bottom-left min-padding z-depth-2">-->
+  <!--    <img class="avatar" src="assets/avatar.gif" alt="Avatar">-->
 
-<!--    <div class="quick-menu">-->
-<!--      &lt;!&ndash; 4 игры, кошелёк, о нас, настройки, "чат", "Поиск собеседников"&ndash;&gt;-->
-<!--      <img src="assets/2.png" alt="Cash" id="cash-btn" class="quick-menu-button">-->
-<!--      <img src="assets/3.png" alt="Chat" id="chat-btn" class="quick-menu-button">-->
-<!--      <img src="assets/4.png" alt="Find Pepes" id="find-btn" class="quick-menu-button">-->
-<!--      <img src="assets/Screenshot_1.png" alt="INFO" id="info-btn" class="quick-menu-button">-->
-<!--    </div>-->
-<!--  </div>-->
-<!--  <div class="bottom-right min-padding z-depth-1">-->
-<!--    <div class="stats">-->
-<!--      <p id="level-stat" class="stat-element">LEVEL 0</p>-->
-<!--      <p id="cash-stat" class="stat-element">$3892</p>-->
-<!--    </div>-->
-<!--    <div class="contacts">-->
-<!--      <div class="Lempurdysh contact-element">-->
-<!--        Lempurdysh-->
-<!--        <button class="mail">Mail</button>-->
-<!--      </div>-->
-<!--      <div class="bogdmoskv contact-element">-->
-<!--        Bogdmoskv-->
-<!--        <button class="mail">Mail</button>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+  <!--    <div class="quick-menu">-->
+  <!--      &lt;!&ndash; 4 игры, кошелёк, о нас, настройки, "чат", "Поиск собеседников"&ndash;&gt;-->
+  <!--      <img src="assets/2.png" alt="Cash" id="cash-btn" class="quick-menu-button">-->
+  <!--      <img src="assets/3.png" alt="Chat" id="chat-btn" class="quick-menu-button">-->
+  <!--      <img src="assets/4.png" alt="Find Pepes" id="find-btn" class="quick-menu-button">-->
+  <!--      <img src="assets/Screenshot_1.png" alt="INFO" id="info-btn" class="quick-menu-button">-->
+  <!--    </div>-->
+  <!--  </div>-->
+  <!--  <div class="bottom-right min-padding z-depth-1">-->
+  <!--    <div class="stats">-->
+  <!--      <p id="level-stat" class="stat-element">LEVEL 0</p>-->
+  <!--      <p id="cash-stat" class="stat-element">$3892</p>-->
+  <!--    </div>-->
+  <!--    <div class="contacts">-->
+  <!--      <div class="Lempurdysh contact-element">-->
+  <!--        Lempurdysh-->
+  <!--        <button class="mail">Mail</button>-->
+  <!--      </div>-->
+  <!--      <div class="bogdmoskv contact-element">-->
+  <!--        Bogdmoskv-->
+  <!--        <button class="mail">Mail</button>-->
+  <!--      </div>-->
+  <!--    </div>-->
+  <!--  </div>-->
 </div>
